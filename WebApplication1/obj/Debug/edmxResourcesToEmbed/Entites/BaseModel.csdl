@@ -128,7 +128,7 @@
     <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
     <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="Monitor">
+  <EntityType Name="Monitors">
     <Key>
       <PropertyRef Name="Id_monitors" />
       <PropertyRef Name="Model" />
@@ -280,7 +280,7 @@
     <Property Name="Kolishestvo" Type="Int32" Nullable="false" />
     <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="sysdiagram">
+  <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="name" />
       <PropertyRef Name="principal_id" />
@@ -292,7 +292,7 @@
     <Property Name="version" Type="Int32" />
     <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
-  <EntityType Name="User">
+  <EntityType Name="Users">
     <Key>
       <PropertyRef Name="id_user" />
       <PropertyRef Name="Login" />
@@ -378,7 +378,7 @@
   </EntityType>
   <Association Name="FK_Users_Admin">
     <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
-    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Admin">
         <PropertyRef Name="id_admin" />
@@ -388,31 +388,31 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Man_Sor_V_AEntities4" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Admins" EntityType="Self.Admin" />
+  <EntityContainer Name="Man_Sor_V_AEntities5" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admin" EntityType="Self.Admin" />
     <EntitySet Name="Activ_user" EntityType="Self.Activ_user" />
     <EntitySet Name="Blok_pitanie" EntityType="Self.Blok_pitanie" />
-    <EntitySet Name="Kabelis" EntityType="Self.Kabeli" />
-    <EntitySet Name="Klaviatyras" EntityType="Self.Klaviatyra" />
-    <EntitySet Name="Korpusas" EntityType="Self.Korpusa" />
-    <EntitySet Name="Kovrikis" EntityType="Self.Kovriki" />
+    <EntitySet Name="Kabeli" EntityType="Self.Kabeli" />
+    <EntitySet Name="Klaviatyra" EntityType="Self.Klaviatyra" />
+    <EntitySet Name="Korpusa" EntityType="Self.Korpusa" />
+    <EntitySet Name="Kovriki" EntityType="Self.Kovriki" />
     <EntitySet Name="Mat_plat" EntityType="Self.Mat_plat" />
-    <EntitySet Name="Monitors" EntityType="Self.Monitor" />
-    <EntitySet Name="Mice" EntityType="Self.Mouse" />
-    <EntitySet Name="Nayshnikis" EntityType="Self.Nayshniki" />
-    <EntitySet Name="Noteboks" EntityType="Self.Notebok" />
-    <EntitySet Name="Operativkas" EntityType="Self.Operativka" />
-    <EntitySet Name="Oxladds" EntityType="Self.Oxladd" />
-    <EntitySet Name="Procesors" EntityType="Self.Procesor" />
+    <EntitySet Name="Monitors" EntityType="Self.Monitors" />
+    <EntitySet Name="Mouse" EntityType="Self.Mouse" />
+    <EntitySet Name="Nayshniki" EntityType="Self.Nayshniki" />
+    <EntitySet Name="Notebok" EntityType="Self.Notebok" />
+    <EntitySet Name="Operativka" EntityType="Self.Operativka" />
+    <EntitySet Name="Oxladd" EntityType="Self.Oxladd" />
+    <EntitySet Name="Procesor" EntityType="Self.Procesor" />
     <EntitySet Name="Ssd_and_Hdd" EntityType="Self.Ssd_and_Hdd" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
     <EntitySet Name="Veb_camera" EntityType="Self.Veb_camera" />
-    <EntitySet Name="Videocarts" EntityType="Self.Videocart" />
+    <EntitySet Name="Videocart" EntityType="Self.Videocart" />
     <EntitySet Name="Vneshnie_nakopiteli" EntityType="Self.Vneshnie_nakopiteli" />
-    <EntitySet Name="Zakazs" EntityType="Self.Zakaz" />
+    <EntitySet Name="Zakaz" EntityType="Self.Zakaz" />
     <AssociationSet Name="FK_Users_Admin" Association="Self.FK_Users_Admin">
-      <End Role="Admin" EntitySet="Admins" />
+      <End Role="Admin" EntitySet="Admin" />
       <End Role="Users" EntitySet="Users" />
     </AssociationSet>
   </EntityContainer>

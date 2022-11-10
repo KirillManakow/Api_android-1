@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище Man_Sor_V_AModelContainer" CdmEntityContainer="Man_Sor_V_AEntities4">
-    <EntitySetMapping Name="Admins">
+  <EntityContainerMapping StorageEntityContainer="Хранилище Man_Sor_V_AModelContainer" CdmEntityContainer="Man_Sor_V_AEntities5">
+    <EntitySetMapping Name="Admin">
       <EntityTypeMapping TypeName="Man_Sor_V_AModel.Admin">
         <MappingFragment StoreEntitySet="Admin">
           <ScalarProperty Name="id_admin" ColumnName="id_admin" />
@@ -30,7 +30,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Kabelis">
+    <EntitySetMapping Name="Kabeli">
       <EntityTypeMapping TypeName="Man_Sor_V_AModel.Kabeli">
         <MappingFragment StoreEntitySet="Kabeli">
           <ScalarProperty Name="id_kabeli" ColumnName="id_kabeli" />
@@ -44,7 +44,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Klaviatyras">
+    <EntitySetMapping Name="Klaviatyra">
       <EntityTypeMapping TypeName="Man_Sor_V_AModel.Klaviatyra">
         <MappingFragment StoreEntitySet="Klaviatyra">
           <ScalarProperty Name="id_klaviatyra" ColumnName="id_klaviatyra" />
@@ -58,7 +58,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Korpusas">
+    <EntitySetMapping Name="Korpusa">
       <EntityTypeMapping TypeName="Man_Sor_V_AModel.Korpusa">
         <MappingFragment StoreEntitySet="Korpusa">
           <ScalarProperty Name="Id_korpusa" ColumnName="Id_korpusa" />
@@ -71,7 +71,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Kovrikis">
+    <EntitySetMapping Name="Kovriki">
       <EntityTypeMapping TypeName="Man_Sor_V_AModel.Kovriki">
         <MappingFragment StoreEntitySet="Kovriki">
           <ScalarProperty Name="id_kovriki" ColumnName="id_kovriki" />
@@ -101,7 +101,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Monitors">
-      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Monitor">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Monitors">
         <MappingFragment StoreEntitySet="Monitors">
           <ScalarProperty Name="Id_monitors" ColumnName="Id_monitors" />
           <ScalarProperty Name="Model" ColumnName="Model" />
@@ -115,7 +115,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Mice">
+    <EntitySetMapping Name="Mouse">
       <EntityTypeMapping TypeName="Man_Sor_V_AModel.Mouse">
         <MappingFragment StoreEntitySet="Mouse">
           <ScalarProperty Name="id_mouse" ColumnName="id_mouse" />
@@ -128,7 +128,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Nayshnikis">
+    <EntitySetMapping Name="Nayshniki">
       <EntityTypeMapping TypeName="Man_Sor_V_AModel.Nayshniki">
         <MappingFragment StoreEntitySet="Nayshniki">
           <ScalarProperty Name="id_nayshniki" ColumnName="id_nayshniki" />
@@ -142,7 +142,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Noteboks">
+    <EntitySetMapping Name="Notebok">
       <EntityTypeMapping TypeName="Man_Sor_V_AModel.Notebok">
         <MappingFragment StoreEntitySet="Notebok">
           <ScalarProperty Name="id_notebok" ColumnName="id_notebok" />
@@ -156,7 +156,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Operativkas">
+    <EntitySetMapping Name="Operativka">
       <EntityTypeMapping TypeName="Man_Sor_V_AModel.Operativka">
         <MappingFragment StoreEntitySet="Operativka">
           <ScalarProperty Name="Id_Operativ_pamat" ColumnName="Id_Operativ_pamat" />
@@ -171,7 +171,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Oxladds">
+    <EntitySetMapping Name="Oxladd">
       <EntityTypeMapping TypeName="Man_Sor_V_AModel.Oxladd">
         <MappingFragment StoreEntitySet="Oxladd">
           <ScalarProperty Name="Id_oxlad" ColumnName="Id_oxlad" />
@@ -184,7 +184,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Procesors">
+    <EntitySetMapping Name="Procesor">
       <EntityTypeMapping TypeName="Man_Sor_V_AModel.Procesor">
         <MappingFragment StoreEntitySet="Procesor">
           <ScalarProperty Name="Id_procesor" ColumnName="Id_procesor" />
@@ -213,7 +213,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="Man_Sor_V_AModel.sysdiagram">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -224,7 +224,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="Man_Sor_V_AModel.User">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Users">
         <MappingFragment StoreEntitySet="Users">
           <ScalarProperty Name="id_user" ColumnName="id_user" />
           <ScalarProperty Name="Login" ColumnName="Login" />
@@ -247,7 +247,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Videocarts">
+    <EntitySetMapping Name="Videocart">
       <EntityTypeMapping TypeName="Man_Sor_V_AModel.Videocart">
         <MappingFragment StoreEntitySet="Videocart">
           <ScalarProperty Name="Id_videocart" ColumnName="Id_videocart" />
@@ -276,7 +276,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Zakazs">
+    <EntitySetMapping Name="Zakaz">
       <EntityTypeMapping TypeName="Man_Sor_V_AModel.Zakaz">
         <MappingFragment StoreEntitySet="Zakaz">
           <ScalarProperty Name="Id_zakaz" ColumnName="Id_zakaz" />
