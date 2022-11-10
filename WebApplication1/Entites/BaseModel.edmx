@@ -1,0 +1,1415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище Man_Sor_V_AModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Activ_user" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Activ_user">
+          <Key>
+            <PropertyRef Name="Id_activ" />
+            <PropertyRef Name="Login" />
+          </Key>
+          <Property Name="Id_activ" Type="int" Nullable="false" />
+          <Property Name="Login" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="id_admin" />
+          </Key>
+          <Property Name="id_admin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Blok_pitanie" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Blok_pitanie">
+          <Key>
+            <PropertyRef Name="Id_Blok_pitanie" />
+            <PropertyRef Name="Name_Blok_pitanie" />
+            <PropertyRef Name="Form_Factor" />
+            <PropertyRef Name="Power" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="Id_Blok_pitanie" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_Blok_pitanie" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Form_Factor" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Power" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Zena" Type="int" Nullable="false" />
+          <Property Name="Kolichestvo" Type="int" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Kabeli" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Kabeli">
+          <Key>
+            <PropertyRef Name="id_kabeli" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Connector_1" />
+            <PropertyRef Name="Connector_2" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+            <PropertyRef Name="Dlina(M)" />
+          </Key>
+          <Property Name="id_kabeli" Type="int" Nullable="false" />
+          <Property Name="Model" Type="varchar(max)" Nullable="false" />
+          <Property Name="Connector_1" Type="varchar(max)" Nullable="false" />
+          <Property Name="Connector_2" Type="varchar(max)" Nullable="false" />
+          <Property Name="Zena" Type="int" Nullable="false" />
+          <Property Name="Kolichestvo" Type="int" Nullable="false" />
+          <Property Name="Dlina(M)" Type="varchar(max)" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Klaviatyra" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Klaviatyra">
+          <Key>
+            <PropertyRef Name="id_klaviatyra" />
+            <PropertyRef Name="Tip" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Material" />
+            <PropertyRef Name="Format" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="id_klaviatyra" Type="int" Nullable="false" />
+          <Property Name="Tip" Type="varchar(max)" Nullable="false" />
+          <Property Name="Model" Type="varchar(max)" Nullable="false" />
+          <Property Name="Material" Type="varchar(max)" Nullable="false" />
+          <Property Name="Format" Type="varchar(max)" Nullable="false" />
+          <Property Name="Zena" Type="int" Nullable="false" />
+          <Property Name="Kolichestvo" Type="int" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Korpusa" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Korpusa">
+          <Key>
+            <PropertyRef Name="Id_korpusa" />
+            <PropertyRef Name="Nazvanie" />
+            <PropertyRef Name="Tiporazmer" />
+            <PropertyRef Name="FormFactor" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="Id_korpusa" Type="int" Nullable="false" />
+          <Property Name="Nazvanie" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tiporazmer" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FormFactor" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Zena" Type="int" Nullable="false" />
+          <Property Name="Kolichestvo" Type="int" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Kovriki" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Kovriki">
+          <Key>
+            <PropertyRef Name="id_kovriki" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Material_pokritia" />
+            <PropertyRef Name="Material_ocnovania" />
+            <PropertyRef Name="Razmer" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="id_kovriki" Type="int" Nullable="false" />
+          <Property Name="Model" Type="varchar(max)" Nullable="false" />
+          <Property Name="Material_pokritia" Type="varchar(max)" Nullable="false" />
+          <Property Name="Material_ocnovania" Type="varchar(max)" Nullable="false" />
+          <Property Name="Razmer" Type="varchar(max)" Nullable="false" />
+          <Property Name="Zena" Type="int" Nullable="false" />
+          <Property Name="Kolichestvo" Type="int" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Mat_plat" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Mat_plat">
+          <Key>
+            <PropertyRef Name="Id_Mat_plat" />
+            <PropertyRef Name="Name_Mat_plat" />
+            <PropertyRef Name="Form_factor" />
+            <PropertyRef Name="Coket" />
+            <PropertyRef Name="ChipSet" />
+            <PropertyRef Name="Kolvo_pamati" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="Id_Mat_plat" Type="int" Nullable="false" />
+          <Property Name="Name_Mat_plat" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Form_factor" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Coket" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ChipSet" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Kolvo_pamati" Type="int" Nullable="false" />
+          <Property Name="Zena" Type="int" Nullable="false" />
+          <Property Name="Kolichestvo" Type="int" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Monitors" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Monitors">
+          <Key>
+            <PropertyRef Name="Id_monitors" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Resolution" />
+            <PropertyRef Name="Connector" />
+            <PropertyRef Name="Matrix" />
+            <PropertyRef Name="Hz" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="Id_monitors" Type="int" Nullable="false" />
+          <Property Name="Model" Type="varchar(max)" Nullable="false" />
+          <Property Name="Resolution" Type="varchar(max)" Nullable="false" />
+          <Property Name="Connector" Type="varchar(max)" Nullable="false" />
+          <Property Name="Matrix" Type="varchar(max)" Nullable="false" />
+          <Property Name="Hz" Type="varchar(max)" Nullable="false" />
+          <Property Name="Zena" Type="int" Nullable="false" />
+          <Property Name="Kolichestvo" Type="int" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Mouse" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Mouse">
+          <Key>
+            <PropertyRef Name="id_mouse" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="DPI" />
+            <PropertyRef Name="Connector" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="id_mouse" Type="int" Nullable="false" />
+          <Property Name="Model" Type="varchar(max)" Nullable="false" />
+          <Property Name="DPI" Type="varchar(max)" Nullable="false" />
+          <Property Name="Connector" Type="varchar(max)" Nullable="false" />
+          <Property Name="Zena" Type="int" Nullable="false" />
+          <Property Name="Kolichestvo" Type="int" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Nayshniki" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Nayshniki">
+          <Key>
+            <PropertyRef Name="id_nayshniki" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Tip" />
+            <PropertyRef Name="Dlina" />
+            <PropertyRef Name="Vid_peredachi" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="id_nayshniki" Type="int" Nullable="false" />
+          <Property Name="Model" Type="varchar(max)" Nullable="false" />
+          <Property Name="Tip" Type="varchar(max)" Nullable="false" />
+          <Property Name="Dlina" Type="varchar(max)" Nullable="false" />
+          <Property Name="Vid_peredachi" Type="varchar(max)" Nullable="false" />
+          <Property Name="Zena" Type="int" Nullable="false" />
+          <Property Name="Kolichestvo" Type="int" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Notebok" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Notebok">
+          <Key>
+            <PropertyRef Name="id_notebok" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Volume_operativ" />
+            <PropertyRef Name="procesor" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichectvo" />
+            <PropertyRef Name="Pamat" />
+          </Key>
+          <Property Name="id_notebok" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Model" Type="varchar(max)" Nullable="false" />
+          <Property Name="Volume_operativ" Type="varchar(max)" Nullable="false" />
+          <Property Name="procesor" Type="varchar(max)" Nullable="false" />
+          <Property Name="Zena" Type="varchar(max)" Nullable="false" />
+          <Property Name="Kolichectvo" Type="varchar(max)" Nullable="false" />
+          <Property Name="Pamat" Type="varchar(max)" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Operativka" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Operativka">
+          <Key>
+            <PropertyRef Name="Id_Operativ_pamat" />
+            <PropertyRef Name="Name_Operativ_pamat" />
+            <PropertyRef Name="Tip_pamati" />
+            <PropertyRef Name="Chastota" />
+            <PropertyRef Name="obem" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolishestvo" />
+            <PropertyRef Name="Kolishestvo_plashek" />
+          </Key>
+          <Property Name="Id_Operativ_pamat" Type="int" Nullable="false" />
+          <Property Name="Name_Operativ_pamat" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tip_pamati" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Chastota" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="obem" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Zena" Type="int" Nullable="false" />
+          <Property Name="Kolishestvo" Type="int" Nullable="false" />
+          <Property Name="Kolishestvo_plashek" Type="int" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Oxladd" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Oxladd">
+          <Key>
+            <PropertyRef Name="Id_oxlad" />
+            <PropertyRef Name="Name_oxlad" />
+            <PropertyRef Name="Oborotov/min" />
+            <PropertyRef Name="Power" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolishestvo" />
+          </Key>
+          <Property Name="Id_oxlad" Type="int" Nullable="false" />
+          <Property Name="Name_oxlad" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Oborotov/min" Type="int" Nullable="false" />
+          <Property Name="Power" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Zena" Type="int" Nullable="false" />
+          <Property Name="Kolishestvo" Type="int" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Procesor" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Procesor">
+          <Key>
+            <PropertyRef Name="Id_procesor" />
+            <PropertyRef Name="Name_procesor" />
+            <PropertyRef Name="Coket" />
+            <PropertyRef Name="Chislo_yader" />
+            <PropertyRef Name="Chislo_potokov" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolishestvo" />
+          </Key>
+          <Property Name="Id_procesor" Type="int" Nullable="false" />
+          <Property Name="Name_procesor" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Coket" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Chislo_yader" Type="int" Nullable="false" />
+          <Property Name="Chislo_potokov" Type="int" Nullable="false" />
+          <Property Name="Zena" Type="int" Nullable="false" />
+          <Property Name="Kolishestvo" Type="int" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Ssd_and_Hdd" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Ssd_and_Hdd">
+          <Key>
+            <PropertyRef Name="Id_SSD_HDD" />
+            <PropertyRef Name="Name_SSD_HDD" />
+            <PropertyRef Name="volume" />
+            <PropertyRef Name="reading_speed" />
+            <PropertyRef Name="write_speed" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolishestvo" />
+          </Key>
+          <Property Name="Id_SSD_HDD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_SSD_HDD" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="volume" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="reading_speed" Type="int" Nullable="false" />
+          <Property Name="write_speed" Type="int" Nullable="false" />
+          <Property Name="Zena" Type="int" Nullable="false" />
+          <Property Name="Kolishestvo" Type="int" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.sysdiagrams" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="principal_id" />
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Users" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="id_user" />
+            <PropertyRef Name="Login" />
+            <PropertyRef Name="password" />
+          </Key>
+          <Property Name="id_user" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="id_admin" Type="int" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Veb_camera" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Veb_camera">
+          <Key>
+            <PropertyRef Name="id_Veb_camera" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Fps" />
+            <PropertyRef Name="Rezolution" />
+            <PropertyRef Name="Tip_matrizi" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="id_Veb_camera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Model" Type="varchar(max)" Nullable="false" />
+          <Property Name="Fps" Type="varchar(max)" Nullable="false" />
+          <Property Name="Rezolution" Type="varchar(max)" Nullable="false" />
+          <Property Name="Tip_matrizi" Type="varchar(max)" Nullable="false" />
+          <Property Name="Zena" Type="int" Nullable="false" />
+          <Property Name="Kolichestvo" Type="int" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Videocart" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Videocart">
+          <Key>
+            <PropertyRef Name="Id_videocart" />
+            <PropertyRef Name="Name_videocart" />
+            <PropertyRef Name="Castota_yadra" />
+            <PropertyRef Name="Tip_pamati" />
+            <PropertyRef Name="Obem_pamati" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="Id_videocart" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name_videocart" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Castota_yadra" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tip_pamati" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Obem_pamati" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Zena" Type="int" Nullable="false" />
+          <Property Name="Kolichestvo" Type="int" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Vneshnie_nakopiteli" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Vneshnie_nakopiteli">
+          <Key>
+            <PropertyRef Name="id_vneshnie_nakopiteli" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Volume" />
+            <PropertyRef Name="Connect" />
+            <PropertyRef Name="Write_speed" />
+            <PropertyRef Name="Read_speed" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="id_vneshnie_nakopiteli" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Model" Type="varchar(max)" Nullable="false" />
+          <Property Name="Volume" Type="varchar(max)" Nullable="false" />
+          <Property Name="Connect" Type="varchar(max)" Nullable="false" />
+          <Property Name="Write_speed" Type="varchar(max)" Nullable="false" />
+          <Property Name="Read_speed" Type="varchar(max)" Nullable="false" />
+          <Property Name="Zena" Type="int" Nullable="false" />
+          <Property Name="Kolichestvo" Type="int" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Man_Sor_V_A.dbo.Zakaz" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Zakaz">
+          <Key>
+            <PropertyRef Name="Id_zakaz" />
+            <PropertyRef Name="Users" />
+            <PropertyRef Name="Nazvanie" />
+            <PropertyRef Name="Zena" />
+          </Key>
+          <Property Name="Id_zakaz" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Users" Type="varchar(max)" Nullable="false" />
+          <Property Name="Nazvanie" Type="varchar(max)" Nullable="false" />
+          <Property Name="Zena" Type="varchar(max)" Nullable="false" />
+          <Property Name="Image" Type="varchar(max)" />
+        </EntityType>
+        <Association Name="FK_Users_Admin">
+          <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="id_admin" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="id_admin" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище Man_Sor_V_AModelContainer">
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Activ_user" EntityType="Self.Activ_user" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Activ_user].[Id_activ] AS [Id_activ], 
+    [Activ_user].[Login] AS [Login]
+    FROM [dbo].[Activ_user] AS [Activ_user]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Blok_pitanie" EntityType="Self.Blok_pitanie" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Blok_pitanie].[Id_Blok_pitanie] AS [Id_Blok_pitanie], 
+    [Blok_pitanie].[Name_Blok_pitanie] AS [Name_Blok_pitanie], 
+    [Blok_pitanie].[Form_Factor] AS [Form_Factor], 
+    [Blok_pitanie].[Power] AS [Power], 
+    [Blok_pitanie].[Zena] AS [Zena], 
+    [Blok_pitanie].[Kolichestvo] AS [Kolichestvo], 
+    [Blok_pitanie].[Image] AS [Image]
+    FROM [dbo].[Blok_pitanie] AS [Blok_pitanie]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Kabeli" EntityType="Self.Kabeli" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Kabeli].[id_kabeli] AS [id_kabeli], 
+    [Kabeli].[Model] AS [Model], 
+    [Kabeli].[Connector_1] AS [Connector_1], 
+    [Kabeli].[Connector_2] AS [Connector_2], 
+    [Kabeli].[Zena] AS [Zena], 
+    [Kabeli].[Kolichestvo] AS [Kolichestvo], 
+    [Kabeli].[Dlina(M)] AS [Dlina(M)], 
+    [Kabeli].[Image] AS [Image]
+    FROM [dbo].[Kabeli] AS [Kabeli]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Klaviatyra" EntityType="Self.Klaviatyra" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Klaviatyra].[id_klaviatyra] AS [id_klaviatyra], 
+    [Klaviatyra].[Tip] AS [Tip], 
+    [Klaviatyra].[Model] AS [Model], 
+    [Klaviatyra].[Material] AS [Material], 
+    [Klaviatyra].[Format] AS [Format], 
+    [Klaviatyra].[Zena] AS [Zena], 
+    [Klaviatyra].[Kolichestvo] AS [Kolichestvo], 
+    [Klaviatyra].[Image] AS [Image]
+    FROM [dbo].[Klaviatyra] AS [Klaviatyra]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Korpusa" EntityType="Self.Korpusa" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Korpusa].[Id_korpusa] AS [Id_korpusa], 
+    [Korpusa].[Nazvanie] AS [Nazvanie], 
+    [Korpusa].[Tiporazmer] AS [Tiporazmer], 
+    [Korpusa].[FormFactor] AS [FormFactor], 
+    [Korpusa].[Zena] AS [Zena], 
+    [Korpusa].[Kolichestvo] AS [Kolichestvo], 
+    [Korpusa].[Image] AS [Image]
+    FROM [dbo].[Korpusa] AS [Korpusa]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Kovriki" EntityType="Self.Kovriki" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Kovriki].[id_kovriki] AS [id_kovriki], 
+    [Kovriki].[Model] AS [Model], 
+    [Kovriki].[Material_pokritia] AS [Material_pokritia], 
+    [Kovriki].[Material_ocnovania] AS [Material_ocnovania], 
+    [Kovriki].[Razmer] AS [Razmer], 
+    [Kovriki].[Zena] AS [Zena], 
+    [Kovriki].[Kolichestvo] AS [Kolichestvo], 
+    [Kovriki].[Image] AS [Image]
+    FROM [dbo].[Kovriki] AS [Kovriki]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Mat_plat" EntityType="Self.Mat_plat" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Mat_plat].[Id_Mat_plat] AS [Id_Mat_plat], 
+    [Mat_plat].[Name_Mat_plat] AS [Name_Mat_plat], 
+    [Mat_plat].[Form_factor] AS [Form_factor], 
+    [Mat_plat].[Coket] AS [Coket], 
+    [Mat_plat].[ChipSet] AS [ChipSet], 
+    [Mat_plat].[Kolvo_pamati] AS [Kolvo_pamati], 
+    [Mat_plat].[Zena] AS [Zena], 
+    [Mat_plat].[Kolichestvo] AS [Kolichestvo], 
+    [Mat_plat].[Image] AS [Image]
+    FROM [dbo].[Mat_plat] AS [Mat_plat]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Monitors" EntityType="Self.Monitors" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Monitors].[Id_monitors] AS [Id_monitors], 
+    [Monitors].[Model] AS [Model], 
+    [Monitors].[Resolution] AS [Resolution], 
+    [Monitors].[Connector] AS [Connector], 
+    [Monitors].[Matrix] AS [Matrix], 
+    [Monitors].[Hz] AS [Hz], 
+    [Monitors].[Zena] AS [Zena], 
+    [Monitors].[Kolichestvo] AS [Kolichestvo], 
+    [Monitors].[Image] AS [Image]
+    FROM [dbo].[Monitors] AS [Monitors]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Mouse" EntityType="Self.Mouse" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Mouse].[id_mouse] AS [id_mouse], 
+    [Mouse].[Model] AS [Model], 
+    [Mouse].[DPI] AS [DPI], 
+    [Mouse].[Connector] AS [Connector], 
+    [Mouse].[Zena] AS [Zena], 
+    [Mouse].[Kolichestvo] AS [Kolichestvo], 
+    [Mouse].[Image] AS [Image]
+    FROM [dbo].[Mouse] AS [Mouse]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Nayshniki" EntityType="Self.Nayshniki" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Nayshniki].[id_nayshniki] AS [id_nayshniki], 
+    [Nayshniki].[Model] AS [Model], 
+    [Nayshniki].[Tip] AS [Tip], 
+    [Nayshniki].[Dlina] AS [Dlina], 
+    [Nayshniki].[Vid_peredachi] AS [Vid_peredachi], 
+    [Nayshniki].[Zena] AS [Zena], 
+    [Nayshniki].[Kolichestvo] AS [Kolichestvo], 
+    [Nayshniki].[Image] AS [Image]
+    FROM [dbo].[Nayshniki] AS [Nayshniki]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Notebok" EntityType="Self.Notebok" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Notebok].[id_notebok] AS [id_notebok], 
+    [Notebok].[Model] AS [Model], 
+    [Notebok].[Volume_operativ] AS [Volume_operativ], 
+    [Notebok].[procesor] AS [procesor], 
+    [Notebok].[Zena] AS [Zena], 
+    [Notebok].[Kolichectvo] AS [Kolichectvo], 
+    [Notebok].[Pamat] AS [Pamat], 
+    [Notebok].[Image] AS [Image]
+    FROM [dbo].[Notebok] AS [Notebok]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Operativka" EntityType="Self.Operativka" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Operativka].[Id_Operativ_pamat] AS [Id_Operativ_pamat], 
+    [Operativka].[Name_Operativ_pamat] AS [Name_Operativ_pamat], 
+    [Operativka].[Tip_pamati] AS [Tip_pamati], 
+    [Operativka].[Chastota] AS [Chastota], 
+    [Operativka].[obem] AS [obem], 
+    [Operativka].[Zena] AS [Zena], 
+    [Operativka].[Kolishestvo] AS [Kolishestvo], 
+    [Operativka].[Kolishestvo_plashek] AS [Kolishestvo_plashek], 
+    [Operativka].[Image] AS [Image]
+    FROM [dbo].[Operativka] AS [Operativka]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Oxladd" EntityType="Self.Oxladd" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Oxladd].[Id_oxlad] AS [Id_oxlad], 
+    [Oxladd].[Name_oxlad] AS [Name_oxlad], 
+    [Oxladd].[Oborotov/min] AS [Oborotov/min], 
+    [Oxladd].[Power] AS [Power], 
+    [Oxladd].[Zena] AS [Zena], 
+    [Oxladd].[Kolishestvo] AS [Kolishestvo], 
+    [Oxladd].[Image] AS [Image]
+    FROM [dbo].[Oxladd] AS [Oxladd]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Procesor" EntityType="Self.Procesor" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Procesor].[Id_procesor] AS [Id_procesor], 
+    [Procesor].[Name_procesor] AS [Name_procesor], 
+    [Procesor].[Coket] AS [Coket], 
+    [Procesor].[Chislo_yader] AS [Chislo_yader], 
+    [Procesor].[Chislo_potokov] AS [Chislo_potokov], 
+    [Procesor].[Zena] AS [Zena], 
+    [Procesor].[Kolishestvo] AS [Kolishestvo], 
+    [Procesor].[Image] AS [Image]
+    FROM [dbo].[Procesor] AS [Procesor]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Ssd_and_Hdd" EntityType="Self.Ssd_and_Hdd" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Ssd_and_Hdd].[Id_SSD_HDD] AS [Id_SSD_HDD], 
+    [Ssd_and_Hdd].[Name_SSD_HDD] AS [Name_SSD_HDD], 
+    [Ssd_and_Hdd].[volume] AS [volume], 
+    [Ssd_and_Hdd].[reading_speed] AS [reading_speed], 
+    [Ssd_and_Hdd].[write_speed] AS [write_speed], 
+    [Ssd_and_Hdd].[Zena] AS [Zena], 
+    [Ssd_and_Hdd].[Kolishestvo] AS [Kolishestvo], 
+    [Ssd_and_Hdd].[Image] AS [Image]
+    FROM [dbo].[Ssd_and_Hdd] AS [Ssd_and_Hdd]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [sysdiagrams].[name] AS [name], 
+    [sysdiagrams].[principal_id] AS [principal_id], 
+    [sysdiagrams].[diagram_id] AS [diagram_id], 
+    [sysdiagrams].[version] AS [version], 
+    [sysdiagrams].[definition] AS [definition]
+    FROM [dbo].[sysdiagrams] AS [sysdiagrams]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Users" EntityType="Self.Users" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Users].[id_user] AS [id_user], 
+    [Users].[Login] AS [Login], 
+    [Users].[password] AS [password], 
+    [Users].[id_admin] AS [id_admin]
+    FROM [dbo].[Users] AS [Users]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Veb_camera" EntityType="Self.Veb_camera" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Veb_camera].[id_Veb_camera] AS [id_Veb_camera], 
+    [Veb_camera].[Model] AS [Model], 
+    [Veb_camera].[Fps] AS [Fps], 
+    [Veb_camera].[Rezolution] AS [Rezolution], 
+    [Veb_camera].[Tip_matrizi] AS [Tip_matrizi], 
+    [Veb_camera].[Zena] AS [Zena], 
+    [Veb_camera].[Kolichestvo] AS [Kolichestvo], 
+    [Veb_camera].[Image] AS [Image]
+    FROM [dbo].[Veb_camera] AS [Veb_camera]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Videocart" EntityType="Self.Videocart" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Videocart].[Id_videocart] AS [Id_videocart], 
+    [Videocart].[Name_videocart] AS [Name_videocart], 
+    [Videocart].[Castota_yadra] AS [Castota_yadra], 
+    [Videocart].[Tip_pamati] AS [Tip_pamati], 
+    [Videocart].[Obem_pamati] AS [Obem_pamati], 
+    [Videocart].[Zena] AS [Zena], 
+    [Videocart].[Kolichestvo] AS [Kolichestvo], 
+    [Videocart].[Image] AS [Image]
+    FROM [dbo].[Videocart] AS [Videocart]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Vneshnie_nakopiteli" EntityType="Self.Vneshnie_nakopiteli" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Vneshnie_nakopiteli].[id_vneshnie_nakopiteli] AS [id_vneshnie_nakopiteli], 
+    [Vneshnie_nakopiteli].[Model] AS [Model], 
+    [Vneshnie_nakopiteli].[Volume] AS [Volume], 
+    [Vneshnie_nakopiteli].[Connect] AS [Connect], 
+    [Vneshnie_nakopiteli].[Write_speed] AS [Write_speed], 
+    [Vneshnie_nakopiteli].[Read_speed] AS [Read_speed], 
+    [Vneshnie_nakopiteli].[Zena] AS [Zena], 
+    [Vneshnie_nakopiteli].[Kolichestvo] AS [Kolichestvo], 
+    [Vneshnie_nakopiteli].[Image] AS [Image]
+    FROM [dbo].[Vneshnie_nakopiteli] AS [Vneshnie_nakopiteli]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Zakaz" EntityType="Self.Zakaz" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Zakaz].[Id_zakaz] AS [Id_zakaz], 
+    [Zakaz].[Users] AS [Users], 
+    [Zakaz].[Nazvanie] AS [Nazvanie], 
+    [Zakaz].[Zena] AS [Zena], 
+    [Zakaz].[Image] AS [Image]
+    FROM [dbo].[Zakaz] AS [Zakaz]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Users_Admin" Association="Self.FK_Users_Admin">
+            <End Role="Admin" EntitySet="Admin" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Man_Sor_V_AModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="id_admin" />
+          </Key>
+          <Property Name="id_admin" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_Users_Admin" FromRole="Admin" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Activ_user">
+          <Key>
+            <PropertyRef Name="Id_activ" />
+            <PropertyRef Name="Login" />
+          </Key>
+          <Property Name="Id_activ" Type="Int32" Nullable="false" />
+          <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Blok_pitanie">
+          <Key>
+            <PropertyRef Name="Id_Blok_pitanie" />
+            <PropertyRef Name="Name_Blok_pitanie" />
+            <PropertyRef Name="Form_Factor" />
+            <PropertyRef Name="Power" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="Id_Blok_pitanie" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_Blok_pitanie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Form_Factor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Power" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Zena" Type="Int32" Nullable="false" />
+          <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Kabeli">
+          <Key>
+            <PropertyRef Name="id_kabeli" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Connector_1" />
+            <PropertyRef Name="Connector_2" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+            <PropertyRef Name="Dlina_M_" />
+          </Key>
+          <Property Name="id_kabeli" Type="Int32" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Connector_1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Connector_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Zena" Type="Int32" Nullable="false" />
+          <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+          <Property Name="Dlina_M_" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Klaviatyra">
+          <Key>
+            <PropertyRef Name="id_klaviatyra" />
+            <PropertyRef Name="Tip" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Material" />
+            <PropertyRef Name="Format" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="id_klaviatyra" Type="Int32" Nullable="false" />
+          <Property Name="Tip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Material" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Format" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Zena" Type="Int32" Nullable="false" />
+          <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Korpusa">
+          <Key>
+            <PropertyRef Name="Id_korpusa" />
+            <PropertyRef Name="Nazvanie" />
+            <PropertyRef Name="Tiporazmer" />
+            <PropertyRef Name="FormFactor" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="Id_korpusa" Type="Int32" Nullable="false" />
+          <Property Name="Nazvanie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tiporazmer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FormFactor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Zena" Type="Int32" Nullable="false" />
+          <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Kovriki">
+          <Key>
+            <PropertyRef Name="id_kovriki" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Material_pokritia" />
+            <PropertyRef Name="Material_ocnovania" />
+            <PropertyRef Name="Razmer" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="id_kovriki" Type="Int32" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Material_pokritia" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Material_ocnovania" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Razmer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Zena" Type="Int32" Nullable="false" />
+          <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Mat_plat">
+          <Key>
+            <PropertyRef Name="Id_Mat_plat" />
+            <PropertyRef Name="Name_Mat_plat" />
+            <PropertyRef Name="Form_factor" />
+            <PropertyRef Name="Coket" />
+            <PropertyRef Name="ChipSet" />
+            <PropertyRef Name="Kolvo_pamati" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="Id_Mat_plat" Type="Int32" Nullable="false" />
+          <Property Name="Name_Mat_plat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Form_factor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Coket" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ChipSet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Kolvo_pamati" Type="Int32" Nullable="false" />
+          <Property Name="Zena" Type="Int32" Nullable="false" />
+          <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Monitors">
+          <Key>
+            <PropertyRef Name="Id_monitors" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Resolution" />
+            <PropertyRef Name="Connector" />
+            <PropertyRef Name="Matrix" />
+            <PropertyRef Name="Hz" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="Id_monitors" Type="Int32" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Resolution" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Connector" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Matrix" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Hz" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Zena" Type="Int32" Nullable="false" />
+          <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Mouse">
+          <Key>
+            <PropertyRef Name="id_mouse" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="DPI" />
+            <PropertyRef Name="Connector" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="id_mouse" Type="Int32" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DPI" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Connector" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Zena" Type="Int32" Nullable="false" />
+          <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Nayshniki">
+          <Key>
+            <PropertyRef Name="id_nayshniki" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Tip" />
+            <PropertyRef Name="Dlina" />
+            <PropertyRef Name="Vid_peredachi" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="id_nayshniki" Type="Int32" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Dlina" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Vid_peredachi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Zena" Type="Int32" Nullable="false" />
+          <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Notebok">
+          <Key>
+            <PropertyRef Name="id_notebok" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Volume_operativ" />
+            <PropertyRef Name="procesor" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichectvo" />
+            <PropertyRef Name="Pamat" />
+          </Key>
+          <Property Name="id_notebok" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Volume_operativ" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="procesor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Zena" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Kolichectvo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Pamat" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Operativka">
+          <Key>
+            <PropertyRef Name="Id_Operativ_pamat" />
+            <PropertyRef Name="Name_Operativ_pamat" />
+            <PropertyRef Name="Tip_pamati" />
+            <PropertyRef Name="Chastota" />
+            <PropertyRef Name="obem" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolishestvo" />
+            <PropertyRef Name="Kolishestvo_plashek" />
+          </Key>
+          <Property Name="Id_Operativ_pamat" Type="Int32" Nullable="false" />
+          <Property Name="Name_Operativ_pamat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tip_pamati" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Chastota" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="obem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Zena" Type="Int32" Nullable="false" />
+          <Property Name="Kolishestvo" Type="Int32" Nullable="false" />
+          <Property Name="Kolishestvo_plashek" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Oxladd">
+          <Key>
+            <PropertyRef Name="Id_oxlad" />
+            <PropertyRef Name="Name_oxlad" />
+            <PropertyRef Name="Oborotov_min" />
+            <PropertyRef Name="Power" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolishestvo" />
+          </Key>
+          <Property Name="Id_oxlad" Type="Int32" Nullable="false" />
+          <Property Name="Name_oxlad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Oborotov_min" Type="Int32" Nullable="false" />
+          <Property Name="Power" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Zena" Type="Int32" Nullable="false" />
+          <Property Name="Kolishestvo" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Procesor">
+          <Key>
+            <PropertyRef Name="Id_procesor" />
+            <PropertyRef Name="Name_procesor" />
+            <PropertyRef Name="Coket" />
+            <PropertyRef Name="Chislo_yader" />
+            <PropertyRef Name="Chislo_potokov" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolishestvo" />
+          </Key>
+          <Property Name="Id_procesor" Type="Int32" Nullable="false" />
+          <Property Name="Name_procesor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Coket" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Chislo_yader" Type="Int32" Nullable="false" />
+          <Property Name="Chislo_potokov" Type="Int32" Nullable="false" />
+          <Property Name="Zena" Type="Int32" Nullable="false" />
+          <Property Name="Kolishestvo" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Ssd_and_Hdd">
+          <Key>
+            <PropertyRef Name="Id_SSD_HDD" />
+            <PropertyRef Name="Name_SSD_HDD" />
+            <PropertyRef Name="volume" />
+            <PropertyRef Name="reading_speed" />
+            <PropertyRef Name="write_speed" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolishestvo" />
+          </Key>
+          <Property Name="Id_SSD_HDD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_SSD_HDD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="volume" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="reading_speed" Type="Int32" Nullable="false" />
+          <Property Name="write_speed" Type="Int32" Nullable="false" />
+          <Property Name="Zena" Type="Int32" Nullable="false" />
+          <Property Name="Kolishestvo" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="principal_id" />
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="id_user" />
+            <PropertyRef Name="Login" />
+            <PropertyRef Name="password" />
+          </Key>
+          <Property Name="id_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_admin" Type="Int32" />
+          <NavigationProperty Name="Admin" Relationship="Self.FK_Users_Admin" FromRole="Users" ToRole="Admin" />
+        </EntityType>
+        <EntityType Name="Veb_camera">
+          <Key>
+            <PropertyRef Name="id_Veb_camera" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Fps" />
+            <PropertyRef Name="Rezolution" />
+            <PropertyRef Name="Tip_matrizi" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="id_Veb_camera" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Fps" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Rezolution" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tip_matrizi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Zena" Type="Int32" Nullable="false" />
+          <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Videocart">
+          <Key>
+            <PropertyRef Name="Id_videocart" />
+            <PropertyRef Name="Name_videocart" />
+            <PropertyRef Name="Castota_yadra" />
+            <PropertyRef Name="Tip_pamati" />
+            <PropertyRef Name="Obem_pamati" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="Id_videocart" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name_videocart" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Castota_yadra" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tip_pamati" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Obem_pamati" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Zena" Type="Int32" Nullable="false" />
+          <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Vneshnie_nakopiteli">
+          <Key>
+            <PropertyRef Name="id_vneshnie_nakopiteli" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Volume" />
+            <PropertyRef Name="Connect" />
+            <PropertyRef Name="Write_speed" />
+            <PropertyRef Name="Read_speed" />
+            <PropertyRef Name="Zena" />
+            <PropertyRef Name="Kolichestvo" />
+          </Key>
+          <Property Name="id_vneshnie_nakopiteli" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Volume" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Connect" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Write_speed" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Read_speed" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Zena" Type="Int32" Nullable="false" />
+          <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Zakaz">
+          <Key>
+            <PropertyRef Name="Id_zakaz" />
+            <PropertyRef Name="Users" />
+            <PropertyRef Name="Nazvanie" />
+            <PropertyRef Name="Zena" />
+          </Key>
+          <Property Name="Id_zakaz" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Users" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nazvanie" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Zena" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_Users_Admin">
+          <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="id_admin" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="id_admin" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Man_Sor_V_AEntities5" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admin" EntityType="Self.Admin" />
+          <EntitySet Name="Activ_user" EntityType="Self.Activ_user" />
+          <EntitySet Name="Blok_pitanie" EntityType="Self.Blok_pitanie" />
+          <EntitySet Name="Kabeli" EntityType="Self.Kabeli" />
+          <EntitySet Name="Klaviatyra" EntityType="Self.Klaviatyra" />
+          <EntitySet Name="Korpusa" EntityType="Self.Korpusa" />
+          <EntitySet Name="Kovriki" EntityType="Self.Kovriki" />
+          <EntitySet Name="Mat_plat" EntityType="Self.Mat_plat" />
+          <EntitySet Name="Monitors" EntityType="Self.Monitors" />
+          <EntitySet Name="Mouse" EntityType="Self.Mouse" />
+          <EntitySet Name="Nayshniki" EntityType="Self.Nayshniki" />
+          <EntitySet Name="Notebok" EntityType="Self.Notebok" />
+          <EntitySet Name="Operativka" EntityType="Self.Operativka" />
+          <EntitySet Name="Oxladd" EntityType="Self.Oxladd" />
+          <EntitySet Name="Procesor" EntityType="Self.Procesor" />
+          <EntitySet Name="Ssd_and_Hdd" EntityType="Self.Ssd_and_Hdd" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+          <EntitySet Name="Veb_camera" EntityType="Self.Veb_camera" />
+          <EntitySet Name="Videocart" EntityType="Self.Videocart" />
+          <EntitySet Name="Vneshnie_nakopiteli" EntityType="Self.Vneshnie_nakopiteli" />
+          <EntitySet Name="Zakaz" EntityType="Self.Zakaz" />
+          <AssociationSet Name="FK_Users_Admin" Association="Self.FK_Users_Admin">
+            <End Role="Admin" EntitySet="Admin" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище Man_Sor_V_AModelContainer" CdmEntityContainer="Man_Sor_V_AEntities5">
+          <EntitySetMapping Name="Admin">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="id_admin" ColumnName="id_admin" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Activ_user">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Activ_user">
+              <MappingFragment StoreEntitySet="Activ_user">
+                <ScalarProperty Name="Id_activ" ColumnName="Id_activ" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Blok_pitanie">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Blok_pitanie">
+              <MappingFragment StoreEntitySet="Blok_pitanie">
+                <ScalarProperty Name="Id_Blok_pitanie" ColumnName="Id_Blok_pitanie" />
+                <ScalarProperty Name="Name_Blok_pitanie" ColumnName="Name_Blok_pitanie" />
+                <ScalarProperty Name="Form_Factor" ColumnName="Form_Factor" />
+                <ScalarProperty Name="Power" ColumnName="Power" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kabeli">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Kabeli">
+              <MappingFragment StoreEntitySet="Kabeli">
+                <ScalarProperty Name="id_kabeli" ColumnName="id_kabeli" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Connector_1" ColumnName="Connector_1" />
+                <ScalarProperty Name="Connector_2" ColumnName="Connector_2" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+                <ScalarProperty Name="Dlina_M_" ColumnName="Dlina(M)" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Klaviatyra">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Klaviatyra">
+              <MappingFragment StoreEntitySet="Klaviatyra">
+                <ScalarProperty Name="id_klaviatyra" ColumnName="id_klaviatyra" />
+                <ScalarProperty Name="Tip" ColumnName="Tip" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Material" ColumnName="Material" />
+                <ScalarProperty Name="Format" ColumnName="Format" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Korpusa">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Korpusa">
+              <MappingFragment StoreEntitySet="Korpusa">
+                <ScalarProperty Name="Id_korpusa" ColumnName="Id_korpusa" />
+                <ScalarProperty Name="Nazvanie" ColumnName="Nazvanie" />
+                <ScalarProperty Name="Tiporazmer" ColumnName="Tiporazmer" />
+                <ScalarProperty Name="FormFactor" ColumnName="FormFactor" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kovriki">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Kovriki">
+              <MappingFragment StoreEntitySet="Kovriki">
+                <ScalarProperty Name="id_kovriki" ColumnName="id_kovriki" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Material_pokritia" ColumnName="Material_pokritia" />
+                <ScalarProperty Name="Material_ocnovania" ColumnName="Material_ocnovania" />
+                <ScalarProperty Name="Razmer" ColumnName="Razmer" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mat_plat">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Mat_plat">
+              <MappingFragment StoreEntitySet="Mat_plat">
+                <ScalarProperty Name="Id_Mat_plat" ColumnName="Id_Mat_plat" />
+                <ScalarProperty Name="Name_Mat_plat" ColumnName="Name_Mat_plat" />
+                <ScalarProperty Name="Form_factor" ColumnName="Form_factor" />
+                <ScalarProperty Name="Coket" ColumnName="Coket" />
+                <ScalarProperty Name="ChipSet" ColumnName="ChipSet" />
+                <ScalarProperty Name="Kolvo_pamati" ColumnName="Kolvo_pamati" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Monitors">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Monitors">
+              <MappingFragment StoreEntitySet="Monitors">
+                <ScalarProperty Name="Id_monitors" ColumnName="Id_monitors" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Resolution" ColumnName="Resolution" />
+                <ScalarProperty Name="Connector" ColumnName="Connector" />
+                <ScalarProperty Name="Matrix" ColumnName="Matrix" />
+                <ScalarProperty Name="Hz" ColumnName="Hz" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mouse">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Mouse">
+              <MappingFragment StoreEntitySet="Mouse">
+                <ScalarProperty Name="id_mouse" ColumnName="id_mouse" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="DPI" ColumnName="DPI" />
+                <ScalarProperty Name="Connector" ColumnName="Connector" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nayshniki">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Nayshniki">
+              <MappingFragment StoreEntitySet="Nayshniki">
+                <ScalarProperty Name="id_nayshniki" ColumnName="id_nayshniki" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Tip" ColumnName="Tip" />
+                <ScalarProperty Name="Dlina" ColumnName="Dlina" />
+                <ScalarProperty Name="Vid_peredachi" ColumnName="Vid_peredachi" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Notebok">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Notebok">
+              <MappingFragment StoreEntitySet="Notebok">
+                <ScalarProperty Name="id_notebok" ColumnName="id_notebok" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Volume_operativ" ColumnName="Volume_operativ" />
+                <ScalarProperty Name="procesor" ColumnName="procesor" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Kolichectvo" ColumnName="Kolichectvo" />
+                <ScalarProperty Name="Pamat" ColumnName="Pamat" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Operativka">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Operativka">
+              <MappingFragment StoreEntitySet="Operativka">
+                <ScalarProperty Name="Id_Operativ_pamat" ColumnName="Id_Operativ_pamat" />
+                <ScalarProperty Name="Name_Operativ_pamat" ColumnName="Name_Operativ_pamat" />
+                <ScalarProperty Name="Tip_pamati" ColumnName="Tip_pamati" />
+                <ScalarProperty Name="Chastota" ColumnName="Chastota" />
+                <ScalarProperty Name="obem" ColumnName="obem" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Kolishestvo" ColumnName="Kolishestvo" />
+                <ScalarProperty Name="Kolishestvo_plashek" ColumnName="Kolishestvo_plashek" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Oxladd">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Oxladd">
+              <MappingFragment StoreEntitySet="Oxladd">
+                <ScalarProperty Name="Id_oxlad" ColumnName="Id_oxlad" />
+                <ScalarProperty Name="Name_oxlad" ColumnName="Name_oxlad" />
+                <ScalarProperty Name="Oborotov_min" ColumnName="Oborotov/min" />
+                <ScalarProperty Name="Power" ColumnName="Power" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Kolishestvo" ColumnName="Kolishestvo" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Procesor">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Procesor">
+              <MappingFragment StoreEntitySet="Procesor">
+                <ScalarProperty Name="Id_procesor" ColumnName="Id_procesor" />
+                <ScalarProperty Name="Name_procesor" ColumnName="Name_procesor" />
+                <ScalarProperty Name="Coket" ColumnName="Coket" />
+                <ScalarProperty Name="Chislo_yader" ColumnName="Chislo_yader" />
+                <ScalarProperty Name="Chislo_potokov" ColumnName="Chislo_potokov" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Kolishestvo" ColumnName="Kolishestvo" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ssd_and_Hdd">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Ssd_and_Hdd">
+              <MappingFragment StoreEntitySet="Ssd_and_Hdd">
+                <ScalarProperty Name="Id_SSD_HDD" ColumnName="Id_SSD_HDD" />
+                <ScalarProperty Name="Name_SSD_HDD" ColumnName="Name_SSD_HDD" />
+                <ScalarProperty Name="volume" ColumnName="volume" />
+                <ScalarProperty Name="reading_speed" ColumnName="reading_speed" />
+                <ScalarProperty Name="write_speed" ColumnName="write_speed" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Kolishestvo" ColumnName="Kolishestvo" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="id_user" ColumnName="id_user" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="id_admin" ColumnName="id_admin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Veb_camera">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Veb_camera">
+              <MappingFragment StoreEntitySet="Veb_camera">
+                <ScalarProperty Name="id_Veb_camera" ColumnName="id_Veb_camera" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Fps" ColumnName="Fps" />
+                <ScalarProperty Name="Rezolution" ColumnName="Rezolution" />
+                <ScalarProperty Name="Tip_matrizi" ColumnName="Tip_matrizi" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Videocart">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Videocart">
+              <MappingFragment StoreEntitySet="Videocart">
+                <ScalarProperty Name="Id_videocart" ColumnName="Id_videocart" />
+                <ScalarProperty Name="Name_videocart" ColumnName="Name_videocart" />
+                <ScalarProperty Name="Castota_yadra" ColumnName="Castota_yadra" />
+                <ScalarProperty Name="Tip_pamati" ColumnName="Tip_pamati" />
+                <ScalarProperty Name="Obem_pamati" ColumnName="Obem_pamati" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vneshnie_nakopiteli">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Vneshnie_nakopiteli">
+              <MappingFragment StoreEntitySet="Vneshnie_nakopiteli">
+                <ScalarProperty Name="id_vneshnie_nakopiteli" ColumnName="id_vneshnie_nakopiteli" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Volume" ColumnName="Volume" />
+                <ScalarProperty Name="Connect" ColumnName="Connect" />
+                <ScalarProperty Name="Write_speed" ColumnName="Write_speed" />
+                <ScalarProperty Name="Read_speed" ColumnName="Read_speed" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Zakaz">
+            <EntityTypeMapping TypeName="Man_Sor_V_AModel.Zakaz">
+              <MappingFragment StoreEntitySet="Zakaz">
+                <ScalarProperty Name="Id_zakaz" ColumnName="Id_zakaz" />
+                <ScalarProperty Name="Users" ColumnName="Users" />
+                <ScalarProperty Name="Nazvanie" ColumnName="Nazvanie" />
+                <ScalarProperty Name="Zena" ColumnName="Zena" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
