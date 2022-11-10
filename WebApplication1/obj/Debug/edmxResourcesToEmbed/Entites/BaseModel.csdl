@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Man_Sor_V_AModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="id_admin" />
+    </Key>
+    <Property Name="id_admin" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_Admin" FromRole="Admin" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Activ_user">
+    <Key>
+      <PropertyRef Name="Id_activ" />
+      <PropertyRef Name="Login" />
+    </Key>
+    <Property Name="Id_activ" Type="Int32" Nullable="false" />
+    <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Blok_pitanie">
+    <Key>
+      <PropertyRef Name="Id_Blok_pitanie" />
+      <PropertyRef Name="Name_Blok_pitanie" />
+      <PropertyRef Name="Form_Factor" />
+      <PropertyRef Name="Power" />
+      <PropertyRef Name="Zena" />
+      <PropertyRef Name="Kolichestvo" />
+    </Key>
+    <Property Name="Id_Blok_pitanie" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_Blok_pitanie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Form_Factor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Power" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zena" Type="Int32" Nullable="false" />
+    <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Kabeli">
+    <Key>
+      <PropertyRef Name="id_kabeli" />
+      <PropertyRef Name="Model" />
+      <PropertyRef Name="Connector_1" />
+      <PropertyRef Name="Connector_2" />
+      <PropertyRef Name="Zena" />
+      <PropertyRef Name="Kolichestvo" />
+      <PropertyRef Name="Dlina_M_" />
+    </Key>
+    <Property Name="id_kabeli" Type="Int32" Nullable="false" />
+    <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Connector_1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Connector_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zena" Type="Int32" Nullable="false" />
+    <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+    <Property Name="Dlina_M_" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Klaviatyra">
+    <Key>
+      <PropertyRef Name="id_klaviatyra" />
+      <PropertyRef Name="Tip" />
+      <PropertyRef Name="Model" />
+      <PropertyRef Name="Material" />
+      <PropertyRef Name="Format" />
+      <PropertyRef Name="Zena" />
+      <PropertyRef Name="Kolichestvo" />
+    </Key>
+    <Property Name="id_klaviatyra" Type="Int32" Nullable="false" />
+    <Property Name="Tip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Material" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Format" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zena" Type="Int32" Nullable="false" />
+    <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Korpusa">
+    <Key>
+      <PropertyRef Name="Id_korpusa" />
+      <PropertyRef Name="Nazvanie" />
+      <PropertyRef Name="Tiporazmer" />
+      <PropertyRef Name="FormFactor" />
+      <PropertyRef Name="Zena" />
+      <PropertyRef Name="Kolichestvo" />
+    </Key>
+    <Property Name="Id_korpusa" Type="Int32" Nullable="false" />
+    <Property Name="Nazvanie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tiporazmer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FormFactor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zena" Type="Int32" Nullable="false" />
+    <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Kovriki">
+    <Key>
+      <PropertyRef Name="id_kovriki" />
+      <PropertyRef Name="Model" />
+      <PropertyRef Name="Material_pokritia" />
+      <PropertyRef Name="Material_ocnovania" />
+      <PropertyRef Name="Razmer" />
+      <PropertyRef Name="Zena" />
+      <PropertyRef Name="Kolichestvo" />
+    </Key>
+    <Property Name="id_kovriki" Type="Int32" Nullable="false" />
+    <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Material_pokritia" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Material_ocnovania" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Razmer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zena" Type="Int32" Nullable="false" />
+    <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Mat_plat">
+    <Key>
+      <PropertyRef Name="Id_Mat_plat" />
+      <PropertyRef Name="Name_Mat_plat" />
+      <PropertyRef Name="Form_factor" />
+      <PropertyRef Name="Coket" />
+      <PropertyRef Name="ChipSet" />
+      <PropertyRef Name="Kolvo_pamati" />
+      <PropertyRef Name="Zena" />
+      <PropertyRef Name="Kolichestvo" />
+    </Key>
+    <Property Name="Id_Mat_plat" Type="Int32" Nullable="false" />
+    <Property Name="Name_Mat_plat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Form_factor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Coket" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ChipSet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kolvo_pamati" Type="Int32" Nullable="false" />
+    <Property Name="Zena" Type="Int32" Nullable="false" />
+    <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Monitor">
+    <Key>
+      <PropertyRef Name="Id_monitors" />
+      <PropertyRef Name="Model" />
+      <PropertyRef Name="Resolution" />
+      <PropertyRef Name="Connector" />
+      <PropertyRef Name="Matrix" />
+      <PropertyRef Name="Hz" />
+      <PropertyRef Name="Zena" />
+      <PropertyRef Name="Kolichestvo" />
+    </Key>
+    <Property Name="Id_monitors" Type="Int32" Nullable="false" />
+    <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Resolution" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Connector" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Matrix" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hz" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zena" Type="Int32" Nullable="false" />
+    <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Mouse">
+    <Key>
+      <PropertyRef Name="id_mouse" />
+      <PropertyRef Name="Model" />
+      <PropertyRef Name="DPI" />
+      <PropertyRef Name="Connector" />
+      <PropertyRef Name="Zena" />
+      <PropertyRef Name="Kolichestvo" />
+    </Key>
+    <Property Name="id_mouse" Type="Int32" Nullable="false" />
+    <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DPI" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Connector" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zena" Type="Int32" Nullable="false" />
+    <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Nayshniki">
+    <Key>
+      <PropertyRef Name="id_nayshniki" />
+      <PropertyRef Name="Model" />
+      <PropertyRef Name="Tip" />
+      <PropertyRef Name="Dlina" />
+      <PropertyRef Name="Vid_peredachi" />
+      <PropertyRef Name="Zena" />
+      <PropertyRef Name="Kolichestvo" />
+    </Key>
+    <Property Name="id_nayshniki" Type="Int32" Nullable="false" />
+    <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tip" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dlina" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Vid_peredachi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zena" Type="Int32" Nullable="false" />
+    <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Notebok">
+    <Key>
+      <PropertyRef Name="id_notebok" />
+      <PropertyRef Name="Model" />
+      <PropertyRef Name="Volume_operativ" />
+      <PropertyRef Name="procesor" />
+      <PropertyRef Name="Zena" />
+      <PropertyRef Name="Kolichectvo" />
+      <PropertyRef Name="Pamat" />
+    </Key>
+    <Property Name="id_notebok" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Volume_operativ" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="procesor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zena" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kolichectvo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Pamat" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Operativka">
+    <Key>
+      <PropertyRef Name="Id_Operativ_pamat" />
+      <PropertyRef Name="Name_Operativ_pamat" />
+      <PropertyRef Name="Tip_pamati" />
+      <PropertyRef Name="Chastota" />
+      <PropertyRef Name="obem" />
+      <PropertyRef Name="Zena" />
+      <PropertyRef Name="Kolishestvo" />
+      <PropertyRef Name="Kolishestvo_plashek" />
+    </Key>
+    <Property Name="Id_Operativ_pamat" Type="Int32" Nullable="false" />
+    <Property Name="Name_Operativ_pamat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tip_pamati" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Chastota" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="obem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zena" Type="Int32" Nullable="false" />
+    <Property Name="Kolishestvo" Type="Int32" Nullable="false" />
+    <Property Name="Kolishestvo_plashek" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Oxladd">
+    <Key>
+      <PropertyRef Name="Id_oxlad" />
+      <PropertyRef Name="Name_oxlad" />
+      <PropertyRef Name="Oborotov_min" />
+      <PropertyRef Name="Power" />
+      <PropertyRef Name="Zena" />
+      <PropertyRef Name="Kolishestvo" />
+    </Key>
+    <Property Name="Id_oxlad" Type="Int32" Nullable="false" />
+    <Property Name="Name_oxlad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Oborotov_min" Type="Int32" Nullable="false" />
+    <Property Name="Power" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zena" Type="Int32" Nullable="false" />
+    <Property Name="Kolishestvo" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Procesor">
+    <Key>
+      <PropertyRef Name="Id_procesor" />
+      <PropertyRef Name="Name_procesor" />
+      <PropertyRef Name="Coket" />
+      <PropertyRef Name="Chislo_yader" />
+      <PropertyRef Name="Chislo_potokov" />
+      <PropertyRef Name="Zena" />
+      <PropertyRef Name="Kolishestvo" />
+    </Key>
+    <Property Name="Id_procesor" Type="Int32" Nullable="false" />
+    <Property Name="Name_procesor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Coket" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Chislo_yader" Type="Int32" Nullable="false" />
+    <Property Name="Chislo_potokov" Type="Int32" Nullable="false" />
+    <Property Name="Zena" Type="Int32" Nullable="false" />
+    <Property Name="Kolishestvo" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Ssd_and_Hdd">
+    <Key>
+      <PropertyRef Name="Id_SSD_HDD" />
+      <PropertyRef Name="Name_SSD_HDD" />
+      <PropertyRef Name="volume" />
+      <PropertyRef Name="reading_speed" />
+      <PropertyRef Name="write_speed" />
+      <PropertyRef Name="Zena" />
+      <PropertyRef Name="Kolishestvo" />
+    </Key>
+    <Property Name="Id_SSD_HDD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_SSD_HDD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="volume" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="reading_speed" Type="Int32" Nullable="false" />
+    <Property Name="write_speed" Type="Int32" Nullable="false" />
+    <Property Name="Zena" Type="Int32" Nullable="false" />
+    <Property Name="Kolishestvo" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="name" />
+      <PropertyRef Name="principal_id" />
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id_user" />
+      <PropertyRef Name="Login" />
+      <PropertyRef Name="password" />
+    </Key>
+    <Property Name="id_user" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_admin" Type="Int32" />
+    <NavigationProperty Name="Admin" Relationship="Self.FK_Users_Admin" FromRole="Users" ToRole="Admin" />
+  </EntityType>
+  <EntityType Name="Veb_camera">
+    <Key>
+      <PropertyRef Name="id_Veb_camera" />
+      <PropertyRef Name="Model" />
+      <PropertyRef Name="Fps" />
+      <PropertyRef Name="Rezolution" />
+      <PropertyRef Name="Tip_matrizi" />
+      <PropertyRef Name="Zena" />
+      <PropertyRef Name="Kolichestvo" />
+    </Key>
+    <Property Name="id_Veb_camera" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fps" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Rezolution" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tip_matrizi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zena" Type="Int32" Nullable="false" />
+    <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Videocart">
+    <Key>
+      <PropertyRef Name="Id_videocart" />
+      <PropertyRef Name="Name_videocart" />
+      <PropertyRef Name="Castota_yadra" />
+      <PropertyRef Name="Tip_pamati" />
+      <PropertyRef Name="Obem_pamati" />
+      <PropertyRef Name="Zena" />
+      <PropertyRef Name="Kolichestvo" />
+    </Key>
+    <Property Name="Id_videocart" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name_videocart" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Castota_yadra" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tip_pamati" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Obem_pamati" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zena" Type="Int32" Nullable="false" />
+    <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Vneshnie_nakopiteli">
+    <Key>
+      <PropertyRef Name="id_vneshnie_nakopiteli" />
+      <PropertyRef Name="Model" />
+      <PropertyRef Name="Volume" />
+      <PropertyRef Name="Connect" />
+      <PropertyRef Name="Write_speed" />
+      <PropertyRef Name="Read_speed" />
+      <PropertyRef Name="Zena" />
+      <PropertyRef Name="Kolichestvo" />
+    </Key>
+    <Property Name="id_vneshnie_nakopiteli" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Volume" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Connect" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Write_speed" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Read_speed" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zena" Type="Int32" Nullable="false" />
+    <Property Name="Kolichestvo" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Zakaz">
+    <Key>
+      <PropertyRef Name="Id_zakaz" />
+      <PropertyRef Name="Users" />
+      <PropertyRef Name="Nazvanie" />
+      <PropertyRef Name="Zena" />
+    </Key>
+    <Property Name="Id_zakaz" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Users" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nazvanie" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zena" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_Users_Admin">
+    <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admin">
+        <PropertyRef Name="id_admin" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="id_admin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Man_Sor_V_AEntities4" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admins" EntityType="Self.Admin" />
+    <EntitySet Name="Activ_user" EntityType="Self.Activ_user" />
+    <EntitySet Name="Blok_pitanie" EntityType="Self.Blok_pitanie" />
+    <EntitySet Name="Kabelis" EntityType="Self.Kabeli" />
+    <EntitySet Name="Klaviatyras" EntityType="Self.Klaviatyra" />
+    <EntitySet Name="Korpusas" EntityType="Self.Korpusa" />
+    <EntitySet Name="Kovrikis" EntityType="Self.Kovriki" />
+    <EntitySet Name="Mat_plat" EntityType="Self.Mat_plat" />
+    <EntitySet Name="Monitors" EntityType="Self.Monitor" />
+    <EntitySet Name="Mice" EntityType="Self.Mouse" />
+    <EntitySet Name="Nayshnikis" EntityType="Self.Nayshniki" />
+    <EntitySet Name="Noteboks" EntityType="Self.Notebok" />
+    <EntitySet Name="Operativkas" EntityType="Self.Operativka" />
+    <EntitySet Name="Oxladds" EntityType="Self.Oxladd" />
+    <EntitySet Name="Procesors" EntityType="Self.Procesor" />
+    <EntitySet Name="Ssd_and_Hdd" EntityType="Self.Ssd_and_Hdd" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Veb_camera" EntityType="Self.Veb_camera" />
+    <EntitySet Name="Videocarts" EntityType="Self.Videocart" />
+    <EntitySet Name="Vneshnie_nakopiteli" EntityType="Self.Vneshnie_nakopiteli" />
+    <EntitySet Name="Zakazs" EntityType="Self.Zakaz" />
+    <AssociationSet Name="FK_Users_Admin" Association="Self.FK_Users_Admin">
+      <End Role="Admin" EntitySet="Admins" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище Man_Sor_V_AModelContainer" CdmEntityContainer="Man_Sor_V_AEntities5">
+    <EntitySetMapping Name="Admin">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="id_admin" ColumnName="id_admin" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Activ_user">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Activ_user">
+        <MappingFragment StoreEntitySet="Activ_user">
+          <ScalarProperty Name="Id_activ" ColumnName="Id_activ" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Blok_pitanie">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Blok_pitanie">
+        <MappingFragment StoreEntitySet="Blok_pitanie">
+          <ScalarProperty Name="Id_Blok_pitanie" ColumnName="Id_Blok_pitanie" />
+          <ScalarProperty Name="Name_Blok_pitanie" ColumnName="Name_Blok_pitanie" />
+          <ScalarProperty Name="Form_Factor" ColumnName="Form_Factor" />
+          <ScalarProperty Name="Power" ColumnName="Power" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kabeli">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Kabeli">
+        <MappingFragment StoreEntitySet="Kabeli">
+          <ScalarProperty Name="id_kabeli" ColumnName="id_kabeli" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Connector_1" ColumnName="Connector_1" />
+          <ScalarProperty Name="Connector_2" ColumnName="Connector_2" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+          <ScalarProperty Name="Dlina_M_" ColumnName="Dlina(M)" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Klaviatyra">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Klaviatyra">
+        <MappingFragment StoreEntitySet="Klaviatyra">
+          <ScalarProperty Name="id_klaviatyra" ColumnName="id_klaviatyra" />
+          <ScalarProperty Name="Tip" ColumnName="Tip" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+          <ScalarProperty Name="Format" ColumnName="Format" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Korpusa">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Korpusa">
+        <MappingFragment StoreEntitySet="Korpusa">
+          <ScalarProperty Name="Id_korpusa" ColumnName="Id_korpusa" />
+          <ScalarProperty Name="Nazvanie" ColumnName="Nazvanie" />
+          <ScalarProperty Name="Tiporazmer" ColumnName="Tiporazmer" />
+          <ScalarProperty Name="FormFactor" ColumnName="FormFactor" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kovriki">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Kovriki">
+        <MappingFragment StoreEntitySet="Kovriki">
+          <ScalarProperty Name="id_kovriki" ColumnName="id_kovriki" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Material_pokritia" ColumnName="Material_pokritia" />
+          <ScalarProperty Name="Material_ocnovania" ColumnName="Material_ocnovania" />
+          <ScalarProperty Name="Razmer" ColumnName="Razmer" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mat_plat">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Mat_plat">
+        <MappingFragment StoreEntitySet="Mat_plat">
+          <ScalarProperty Name="Id_Mat_plat" ColumnName="Id_Mat_plat" />
+          <ScalarProperty Name="Name_Mat_plat" ColumnName="Name_Mat_plat" />
+          <ScalarProperty Name="Form_factor" ColumnName="Form_factor" />
+          <ScalarProperty Name="Coket" ColumnName="Coket" />
+          <ScalarProperty Name="ChipSet" ColumnName="ChipSet" />
+          <ScalarProperty Name="Kolvo_pamati" ColumnName="Kolvo_pamati" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monitors">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Monitors">
+        <MappingFragment StoreEntitySet="Monitors">
+          <ScalarProperty Name="Id_monitors" ColumnName="Id_monitors" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Resolution" ColumnName="Resolution" />
+          <ScalarProperty Name="Connector" ColumnName="Connector" />
+          <ScalarProperty Name="Matrix" ColumnName="Matrix" />
+          <ScalarProperty Name="Hz" ColumnName="Hz" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mouse">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Mouse">
+        <MappingFragment StoreEntitySet="Mouse">
+          <ScalarProperty Name="id_mouse" ColumnName="id_mouse" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="DPI" ColumnName="DPI" />
+          <ScalarProperty Name="Connector" ColumnName="Connector" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nayshniki">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Nayshniki">
+        <MappingFragment StoreEntitySet="Nayshniki">
+          <ScalarProperty Name="id_nayshniki" ColumnName="id_nayshniki" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Tip" ColumnName="Tip" />
+          <ScalarProperty Name="Dlina" ColumnName="Dlina" />
+          <ScalarProperty Name="Vid_peredachi" ColumnName="Vid_peredachi" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notebok">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Notebok">
+        <MappingFragment StoreEntitySet="Notebok">
+          <ScalarProperty Name="id_notebok" ColumnName="id_notebok" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Volume_operativ" ColumnName="Volume_operativ" />
+          <ScalarProperty Name="procesor" ColumnName="procesor" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Kolichectvo" ColumnName="Kolichectvo" />
+          <ScalarProperty Name="Pamat" ColumnName="Pamat" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Operativka">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Operativka">
+        <MappingFragment StoreEntitySet="Operativka">
+          <ScalarProperty Name="Id_Operativ_pamat" ColumnName="Id_Operativ_pamat" />
+          <ScalarProperty Name="Name_Operativ_pamat" ColumnName="Name_Operativ_pamat" />
+          <ScalarProperty Name="Tip_pamati" ColumnName="Tip_pamati" />
+          <ScalarProperty Name="Chastota" ColumnName="Chastota" />
+          <ScalarProperty Name="obem" ColumnName="obem" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Kolishestvo" ColumnName="Kolishestvo" />
+          <ScalarProperty Name="Kolishestvo_plashek" ColumnName="Kolishestvo_plashek" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Oxladd">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Oxladd">
+        <MappingFragment StoreEntitySet="Oxladd">
+          <ScalarProperty Name="Id_oxlad" ColumnName="Id_oxlad" />
+          <ScalarProperty Name="Name_oxlad" ColumnName="Name_oxlad" />
+          <ScalarProperty Name="Oborotov_min" ColumnName="Oborotov/min" />
+          <ScalarProperty Name="Power" ColumnName="Power" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Kolishestvo" ColumnName="Kolishestvo" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Procesor">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Procesor">
+        <MappingFragment StoreEntitySet="Procesor">
+          <ScalarProperty Name="Id_procesor" ColumnName="Id_procesor" />
+          <ScalarProperty Name="Name_procesor" ColumnName="Name_procesor" />
+          <ScalarProperty Name="Coket" ColumnName="Coket" />
+          <ScalarProperty Name="Chislo_yader" ColumnName="Chislo_yader" />
+          <ScalarProperty Name="Chislo_potokov" ColumnName="Chislo_potokov" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Kolishestvo" ColumnName="Kolishestvo" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ssd_and_Hdd">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Ssd_and_Hdd">
+        <MappingFragment StoreEntitySet="Ssd_and_Hdd">
+          <ScalarProperty Name="Id_SSD_HDD" ColumnName="Id_SSD_HDD" />
+          <ScalarProperty Name="Name_SSD_HDD" ColumnName="Name_SSD_HDD" />
+          <ScalarProperty Name="volume" ColumnName="volume" />
+          <ScalarProperty Name="reading_speed" ColumnName="reading_speed" />
+          <ScalarProperty Name="write_speed" ColumnName="write_speed" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Kolishestvo" ColumnName="Kolishestvo" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="id_admin" ColumnName="id_admin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Veb_camera">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Veb_camera">
+        <MappingFragment StoreEntitySet="Veb_camera">
+          <ScalarProperty Name="id_Veb_camera" ColumnName="id_Veb_camera" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Fps" ColumnName="Fps" />
+          <ScalarProperty Name="Rezolution" ColumnName="Rezolution" />
+          <ScalarProperty Name="Tip_matrizi" ColumnName="Tip_matrizi" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Videocart">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Videocart">
+        <MappingFragment StoreEntitySet="Videocart">
+          <ScalarProperty Name="Id_videocart" ColumnName="Id_videocart" />
+          <ScalarProperty Name="Name_videocart" ColumnName="Name_videocart" />
+          <ScalarProperty Name="Castota_yadra" ColumnName="Castota_yadra" />
+          <ScalarProperty Name="Tip_pamati" ColumnName="Tip_pamati" />
+          <ScalarProperty Name="Obem_pamati" ColumnName="Obem_pamati" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vneshnie_nakopiteli">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Vneshnie_nakopiteli">
+        <MappingFragment StoreEntitySet="Vneshnie_nakopiteli">
+          <ScalarProperty Name="id_vneshnie_nakopiteli" ColumnName="id_vneshnie_nakopiteli" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="Connect" ColumnName="Connect" />
+          <ScalarProperty Name="Write_speed" ColumnName="Write_speed" />
+          <ScalarProperty Name="Read_speed" ColumnName="Read_speed" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Kolichestvo" ColumnName="Kolichestvo" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zakaz">
+      <EntityTypeMapping TypeName="Man_Sor_V_AModel.Zakaz">
+        <MappingFragment StoreEntitySet="Zakaz">
+          <ScalarProperty Name="Id_zakaz" ColumnName="Id_zakaz" />
+          <ScalarProperty Name="Users" ColumnName="Users" />
+          <ScalarProperty Name="Nazvanie" ColumnName="Nazvanie" />
+          <ScalarProperty Name="Zena" ColumnName="Zena" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,2 @@
+C:\Users\User\Desktop\API_C#\Api_android-master\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
+C:\Users\User\Desktop\API_C#\Api_android-master\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
