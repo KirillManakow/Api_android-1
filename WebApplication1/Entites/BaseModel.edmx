@@ -1055,7 +1055,7 @@
           <Property Name="Users" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Nazvanie" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Zena" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="true" />
         </EntityType>
         <Association Name="FK_Users_Admin">
           <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />

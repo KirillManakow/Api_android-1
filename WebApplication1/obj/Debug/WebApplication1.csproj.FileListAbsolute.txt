@@ -96,3 +96,4 @@ C:\Users\User\Desktop\API_C#\Api_android-master\WebApplication1\bin\ru\System.We
 C:\Users\User\Desktop\API_C#\Api_android-master\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
 C:\Users\User\Desktop\API_C#\Api_android-master\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\User\Desktop\API_C#\Api_android-master\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\User\Desktop\API_C#\Api_android-master\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
